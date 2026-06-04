@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KayDev | Web Developer Portfolio</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon_io/favicon.ico" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+
+<style>
+:root {
+--bg-primary: #08112a;
+--bg-secondary: rgba(255, 255, 255, 0.05);
+--accent: #00f2ff;
+--accent-soft: rgba(0, 242, 255, 0.18);
+--text-light: #edf2ff;
+--text-muted: #a7b1c8;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+background: radial-gradient(circle at top left, rgba(0, 242, 255, 0.08), transparent 22%),
+linear-gradient(180deg, #0d122f 0%, #13183f 45%, #0b0e1d 100%);
+color: var(--text-light);
+}
+
+a {
+color: inherit;
+}
+
+a:hover,
+.nav-link:hover,
+.btn:hover {
+color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand {
+font-family: 'EB Garamond', serif;
+font-size: 1.8rem;
+letter-spacing: 0.06em;
+color: var(--accent);
+}
+
+.navbar {
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+
+.navbar-nav .nav-link {
+color: #d8dbe8;
+font-weight: 500;
+}
+
+.navbar-nav .nav-link.active {
+color: #fff;
+}
+
+.hero {
+padding: 5.5rem 0 3rem;
+position: relative;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: radial-gradient(circle at top right, var(--accent-soft), transparent 35%);
+pointer-events: none;
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+}
+
+.section-title {
+font-size: 2.75rem;
+letter-spacing: 0.02em;
+margin-bottom: 0.6rem;
+}
+
+.section-subtitle {
+color: var(--text-muted);
+max-width: 680px;
+}
+
+.section-card,
+.card,
+.contact-card {
+border: none;
+border-radius: 1.5rem;
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(10px);
+}
+
+.card-img-top {
+border-top-left-radius: 1.5rem;
+border-top-right-radius: 1.5rem;
+}
+
+.card-body {
+padding: 1.75rem;
+}
+
+.btn-primary {
+background: linear-gradient(135deg, #00d1ff, #0063ff);
+border: none;
+}
+
+.btn-primary:hover {
+background: linear-gradient(135deg, #18d7ff, #3a74ff);
+}
+
+.progress {
+height: 1.1rem;
+border-radius: 1rem;
+background: rgba(255, 255, 255, 0.12);
+}
+
+.progress-bar {
+border-radius: 1rem;
+background: linear-gradient(135deg, #00f2ff, #2a8eff);
+}
+
+.skill-badge {
+width: 48px;
+height: 48px;
+border-radius: 12px;
+background: rgba(0, 242, 255, 0.1);
+display: inline-flex;
+align-items: center;
+justify-content: center;
+margin-right: 0.85rem;
+}
+
+.skill-badge img {
+width: 28px;
+height: 28px;
+}
+
+.footer-bar {
+padding: 1rem 0;
+background: rgba(255, 255, 255, 0.05);
+}
+
+footer {
+color: var(--text-muted);
+}
+
+.scroll-top {
+position: fixed;
+right: 1.25rem;
+bottom: 1.25rem;
+z-index: 999;
+}
+
+@media (max-width: 991px) {
+.hero {
+padding-top: 4rem;
+}
+}
+
+@media (max-width: 767px) {
+.section-title {
+font-size: 2.2rem;
+}
+.navbar-brand {
+font-size: 1.5rem;
+}
+.hero {
+padding-top: 3rem;
+}
+}
+</style>
+</head>
+
+<body id="top">
+	<!-- header section begins -->
+<header class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark shadow-sm">
+<div class="container">
+<a class="navbar-brand" href="#top">KayDevs</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto gap-2">
+<li class="nav-item">
+<a class="nav-link active" href="#top">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#skills">Skills</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#portfolio">Portfolio</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+<!-- Header section ends -->
+
+<!-- hero section -->
+<section class="hero">
+<div class="container hero-content">
+<div class="row align-items-center gy-5">
+<div class="col-lg-6">
+<p class="text-uppercase text-primary fw-semibold mb-3">Full-stack web developer</p>
+<h1 class="display-5 fw-bold mb-4">Hi, I’m Popoola. I build polished, responsive web experiences.</h1>
+<p class="section-subtitle mb-4">I design and develop clean websites with usability, accessibility, and performance in mind. My portfolio showcases projects built with HTML, CSS, Bootstrap, and modern design principles.</p>
+<div class="d-flex flex-wrap gap-3 mb-4">
+<a href="#portfolio" class="btn btn-primary btn-lg">View Portfolio</a>
+<a href="#contact" class="btn btn-outline-light btn-lg">Work with me</a>
+</div>
+<div class="d-flex flex-wrap gap-3 text-muted">
+<div class="bg-white bg-opacity-10 rounded-3 px-3 py-2">
+<strong class="d-block text-white">3+</strong>
+Projects completed
+</div>
+<div class="bg-white bg-opacity-10 rounded-3 px-3 py-2">
+<strong class="d-block text-white">Responsive</strong>
+Mobile-ready design
+</div>
+</div>
+</div>
+<div class="col-lg-6 text-center">
+<div class="section-card p-4 mx-auto" style="max-width: 520px;">
+<img src="images/myimg.png" class="img-fluid rounded-4 shadow-lg" alt="Popoola Oluwakayode Isaiah">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero section ends -->
+
+<!-- About me section Begin -->
+<section id="about" class="py-5">
+<div class="container">
+<div class="row align-items-center gy-4">
+<div class="col-lg-7">
+<h2 class="section-title">About Me</h2>
+<p class="section-subtitle">I am a software developer with a focus on creating intuitive, user-centered websites. I combine strong front-end skills with attention to detail to deliver professional, modern web solutions.</p>
+<p>I am experienced in turning concepts into polished digital products. I prioritize readability, performance, and a seamless experience across devices.</p>
+<p>Currently, I am building my portfolio, sourcing real-world projects, and learning new techniques to level up my design and development workflow.</p>
+</div>
+
+<div class="col-lg-5">
+<div class="section-card p-4 h-100">
+<h5 class="mb-3">What I bring to the table</h5>
+<ul class="list-unstyled mb-0 text-light">
+<li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Clean responsive layouts</li>
+<li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Readable, maintainable code</li>
+<li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Fast loading and accessibility</li>
+<li><i class="fas fa-check-circle text-primary me-2"></i>Friendly collaboration and communication</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About me section ends -->
+
+<!-- Skills section begin-->
+<section id="skills" class="py-5 bg-dark bg-opacity-50">
+<div class="container">
+<div class="row gy-4 align-items-center">
+<div class="col-lg-5">
+<h2 class="section-title">Skills</h2>
+<p class="section-subtitle">These are the tools and languages I use to build strong front-end experiences and simple, maintainable interfaces.</p>
+</div>
+<div class="col-lg-7">
+<div class="row g-4">
+<div class="col-12">
+<div class="section-card p-4">
+<div class="d-flex align-items-center mb-3">
+<div class="skill-badge"><img src="images/html-5.png" alt="HTML"></div>
+<strong>HTML</strong>
+</div>
+<div class="progress"><div class="progress-bar" style="width: 75%;" role="progressbar"></div></div>
+</div>
+</div>
+<div class="col-12">
+<div class="section-card p-4">
+<div class="d-flex align-items-center mb-3">
+<div class="skill-badge"><img src="images/css-3.png" alt="CSS"></div>
+<strong>CSS</strong>
+</div>
+<div class="progress"><div class="progress-bar" style="width: 65%;" role="progressbar"></div></div>
+</div>
+</div>
+<div class="col-12">
+<div class="section-card p-4">
+<div class="d-flex align-items-center mb-3">
+<div class="skill-badge"><img src="images/boot.png" alt="Bootstrap"></div>
+<strong>Bootstrap</strong>
+</div>
+<div class="progress"><div class="progress-bar" style="width: 60%;" role="progressbar"></div></div>
+</div>
+</div>
+<div class="col-12">
+<div class="section-card p-4">
+<div class="d-flex align-items-center mb-3">
+<div class="skill-badge"><img src="images/java.png" alt="JavaScript"></div>
+<strong>JavaScript</strong>
+</div>
+<div class="progress"><div class="progress-bar" style="width: 25%;" role="progressbar"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills section end -->
+
+<!-- portfolio section begins-->
+<section id="portfolio" class="py-5">
+<div class="container">
+<div class="row mb-5">
+<div class="col-lg-8">
+<h2 class="section-title">Portfolio</h2>
+<p class="section-subtitle">A selection of recent projects demonstrating responsive layouts and polished design.</p>
+</div>
+</div>
+<div class="row gx-4 gy-4">
+<div class="col-md-6 col-lg-4 d-flex">
+<div class="card shadow-sm flex-fill">
+<img src="images/1min.png" class="card-img-top" alt="Peptide Website">
+<div class="card-body">
+<h5 class="card-titext text-light">A responsive website built for a peptide company to showcase products and improve buyer access.</p>
+<a href="images/1min.png" class="btn btn-primary" target="_blank">View Sample</a>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 d-flex">
+<div class="card shadow-sm flex-fill">
+<img src="images/2min.png" class="card-img-top" alt="Matrimony Project">
+<div class="card-body">
+<h5 class="card-title text-light">Matrimony Web App</h5>
+<p class="card-text text-light">A responsive matchmaking app concept built with a focus on clean UI and easy user flow.</p>
+<a href="images/2min.png" class="btn btn-primary" target="_blank">View Sample</a>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-4 d-flex">
+<div class="card shadow-sm flex-fill">
+<img src="images/cv.png" class="card-img-top" alt="CV document">
+<div class="card-body">
+<h5 class="card-title text-light">Curriculum Vitae</h5>
+<p class="card-text text-light">Download my CV to see my experience, projects, and technical skills in one polished document.</p>
+<a href="cv.pdf" class="btn btn-primary" target="_blank">Download CV</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio section ends -->
+
+<!-- Contact/inquiry section begin -->
+<section id="contact" class="py-5 bg-dark bg-opacity-50">
+<div class="container">
+<div class="row gy-4 align-items-center">
+<div class="col-lg-5">
+<h2 class="section-title">Let's Build Your Next Project</h2>
+<p class="section-subtitle">Available for freelance and full-time opportunities. Reach out to discuss UI/UX, web apps, or custom websites.</p>
+<div class="mb-4">
+<div class="d-flex align-items-center mb-3">
+<i class="fas fa-laptop-code fa-lg text-primary me-3"></i>
+<span>Web & mobile apps</span>
+</div>
+<div class="d-flex align-items-center mb-3">
+<i class="fas fa-paint-brush fa-lg text-primary me-3"></i>
+<span>UI/UX design</span>
+</div>
+<div class="d-flex align-items-center">
+<i class="fas fa-server fa-lg text-primary me-3"></i>
+<span>APIs & backend</span>
+</div>
+</div>
+<div class="text-muted text-light">
+<p class="mb-2 text-light"><i class="fas fa-phone-alt me-2"></i>+234 800 055 9966</p>
+<p class="mb-2 text-light"><i class="fas fa-envelope me-2"></i>youremail@example.com</p>
+<p class="mb-0 text-light"><i class="fas fa-map-marker-alt me-2"></i>Block 7, New City Estate, Lagos</p>
+</div>
+</div>
+<div class="col-lg-7">
+<div class="contact-card p-4 shadow-sm">
+<form class="row g-3" novalidate>
+<div class="col-md-6">
+<label for="inputName" class="form-label">Name</label>
+<input type="text" class="form-control" id="inputName" placeholder="Your name">
+</div>
+<div class="col-md-6">
+<label for="inputEmail4" class="form-label">Email</label>
+<input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com">
+</div>
+<div class="col-12">
+<label for="inputAddress" class="form-label">Address</label>
+<input type="text" class="form-control" id="inputAddress" placeholder="Your address">
+</div>
+<div class="col-md-6">
+<label for="phoneNumber" class="form-label">Phone Number</label>
+<input type="tel" class="form-control" id="phoneNumber" placeholder="+234">
+</div>
+<div class="col-md-6">
+<label for="inputCity" class="form-label">City</label>
+<input type="text" class="form-control" id="inputCity" placeholder="Lagos">
+</div>
+<div class="col-md-6">
+<label for="inputState" class="form-label">State</label>
+<select id="inputState" class="form-select">
+<option value="">Select a state</option>
+<option>Abuja</option>
+<option>Abia</option>
+<option>Adamawa</option>
+<option>Akwa Ibom</option>
+<option>Anambra</option>
+<option>Bauchi</option>
+<option>Bayelsa</option>
+<option>Benue</option>
+<option>Cross River</option>
+<option>Delta</option>
+<option>Ebonyi</option>
+<option>Edo</option>
+<option>Enugu</option>
+<option>Gombe</option>
+<option>Imo</option>
+<option>Jigawa</option>
+<option>Kaduna</option>
+<option>Kano</option>
+<option>Katsina</option>
+<option>Kogi</option>
+<option>Kwara</option>
+<option>Lagos</option>
+<option>Nassarawa</option>
+<option>Niger</option>
+<option>Ondo</option>
+<option>Osun</option>
+<option>Oyo</option>
+<option>Plateau</option>
+<option>Rivers</option>
+<option>Sokoto</option>
+<option>Taraba</option>
+<option>Yobe</option>
+<option>Zamfara</option>
+</select>
+</div>
+<div class="col-12">
+<label for="floatingTextarea" class="form-label">Message</label>
+<textarea class="form-control" id="floatingTextarea" rows="4" placeholder="Tell me about your project"></textarea>
+</div>
+<div class="col-12">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="gridCheck">
+<label class="form-check-label" for="gridCheck">Remember me</label>
+</div>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-primary w-100">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact/inquiry section ends -->
+
+<!-- Footer section Begin -->
+<footer class="footer-bar text-center">
+<div class="container">
+<div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+<a href="#" class="text-white fs-5"><i class="fab fa-linkedin"></i></a>
+<a href="#" class="text-white fs-5"><i class="fab fa-github"></i></a>
+<a href="#" class="text-white fs-5"><i class="fab fa-whatsapp"></i></a>
+</div>
+<p class="mb-0">Developed by KayDevs.Ent &copy; 2026</p>
+</div>
+</footer>
+<!-- Footer section Ends -->
+
+<a href="#" class="btn btn-info rounded-circle p-3 shadow-lg scroll-top" title="Back to top">
+<i class="bi bi-arrow-up-circle-fill"></i>
+</a>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
