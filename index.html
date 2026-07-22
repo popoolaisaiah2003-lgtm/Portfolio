@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -6,6 +6,7 @@
 <title>KayDev | Web Developer Portfolio</title>
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="fontawesome/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,187 +15,14 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="manifest" href="favicon_io/site.webmanifest">
 
-<style>
-:root {
---bg-primary: #08112a;
---bg-secondary: rgba(255, 255, 255, 0.05);
---accent: #00f2ff;
---accent-soft: rgba(0, 242, 255, 0.18);
---text-light: #edf2ff;
---text-muted: #a7b1c8;
-}
 
-body {
-font-family: 'Roboto', sans-serif;
-background: radial-gradient(circle at top left, rgba(0, 242, 255, 0.08), transparent 22%),
-linear-gradient(180deg, #0d122f 0%, #13183f 45%, #0b0e1d 100%);
-color: var(--text-light);
-}
-
-a {
-color: inherit;
-}
-
-a:hover,
-.nav-link:hover,
-.btn:hover {
-color: #fff;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-font-family: 'Playfair Display', serif;
-}
-
-.navbar-brand {
-font-family: 'EB Garamond', serif;
-font-size: 1.8rem;
-letter-spacing: 0.06em;
-color: var(--accent);
-}
-
-.navbar {
-padding-top: 1rem;
-padding-bottom: 1rem;
-}
-
-.navbar-nav .nav-link {
-color: #d8dbe8;
-font-weight: 500;
-}
-
-.navbar-nav .nav-link.active {
-color: #fff;
-}
-
-.hero {
-padding: 5.5rem 0 3rem;
-position: relative;
-}
-
-.hero::before {
-content: '';
-position: absolute;
-inset: 0;
-background: radial-gradient(circle at top right, var(--accent-soft), transparent 35%);
-pointer-events: none;
-}
-
-.hero-content {
-position: relative;
-z-index: 1;
-}
-
-.section-title {
-font-size: 2.75rem;
-letter-spacing: 0.02em;
-margin-bottom: 0.6rem;
-}
-
-.section-subtitle {
-color: var(--text-muted);
-max-width: 680px;
-}
-
-.section-card,
-.card,
-.contact-card {
-border: none;
-border-radius: 1.5rem;
-background: rgba(255, 255, 255, 0.06);
-backdrop-filter: blur(10px);
-}
-
-.card-img-top {
-border-top-left-radius: 1.5rem;
-border-top-right-radius: 1.5rem;
-}
-
-.card-body {
-padding: 1.75rem;
-}
-
-.btn-primary {
-background: linear-gradient(135deg, #00d1ff, #0063ff);
-border: none;
-}
-
-.btn-primary:hover {
-background: linear-gradient(135deg, #18d7ff, #3a74ff);
-}
-
-.progress {
-height: 1.1rem;
-border-radius: 1rem;
-background: rgba(255, 255, 255, 0.12);
-}
-
-.progress-bar {
-border-radius: 1rem;
-background: linear-gradient(135deg, #00f2ff, #2a8eff);
-}
-
-.skill-badge {
-width: 48px;
-height: 48px;
-border-radius: 12px;
-background: rgba(0, 242, 255, 0.1);
-display: inline-flex;
-align-items: center;
-justify-content: center;
-margin-right: 0.85rem;
-}
-
-.skill-badge img {
-width: 28px;
-height: 28px;
-}
-
-.footer-bar {
-padding: 1rem 0;
-background: rgba(255, 255, 255, 0.05);
-}
-
-footer {
-color: var(--text-muted);
-}
-
-.scroll-top {
-position: fixed;
-right: 1.25rem;
-bottom: 1.25rem;
-z-index: 999;
-}
-
-@media (max-width: 991px) {
-.hero {
-padding-top: 4rem;
-}
-}
-
-@media (max-width: 767px) {
-.section-title {
-font-size: 2.2rem;
-}
-.navbar-brand {
-font-size: 1.5rem;
-}
-.hero {
-padding-top: 3rem;
-}
-}
-</style>
 </head>
 
 <body id="top">
 	<!-- header section begins -->
-<header class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark shadow-sm">
+<header class="navbar navbar-expand-lg navbar-dark sticky-top site-navbar" id="mainHeader">
 <div class="container">
-<a class="navbar-brand" href="#top">KayDevs</a>
+<a class="navbar-brand" href="#top">KayDev</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -210,7 +38,7 @@ padding-top: 3rem;
 <a class="nav-link" href="#skills">Skills</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#portfolio">Portfolio</a>
+<a class="nav-link" href="#portfolio">Projects</a>
 </li>
 <li class="nav-item">
 <a class="nav-link" href="#contact">Contact</a>
@@ -222,58 +50,93 @@ padding-top: 3rem;
 <!-- Header section ends -->
 
 <!-- hero section -->
-<section class="hero">
+<section class="hero" id="home">
 <div class="container hero-content">
 <div class="row align-items-center gy-5">
-<div class="col-lg-6">
-<p class="text-uppercase text-primary fw-semibold mb-3">Full-stack web developer</p>
-<h1 class="display-5 fw-bold mb-4">Hi, I’m Popoola. I build polished, responsive web experiences.</h1>
-<p class="section-subtitle mb-4">I design and develop clean websites with usability, accessibility, and performance in mind. My portfolio showcases projects built with HTML, CSS, Bootstrap, and modern design principles.</p>
-<div class="d-flex flex-wrap gap-3 mb-4">
-<a href="#portfolio" class="btn btn-primary btn-lg">View Portfolio</a>
-<a href="#contact" class="btn btn-outline-light btn-lg">Work with me</a>
-</div>
-<div class="d-flex flex-wrap gap-3 text-muted">
-<div class="bg-white bg-opacity-10 rounded-3 px-3 py-2">
-<strong class="d-block text-white">3+</strong>
-Projects completed
-</div>
-<div class="bg-white bg-opacity-10 rounded-3 px-3 py-2">
-<strong class="d-block text-white">Responsive</strong>
-Mobile-ready design
+<div class="col-lg-6 order-1">
+<p class="hero-kicker fade-up">Hello, I'm</p>
+<h1 class="hero-name fw-bold fade-up delay-1">Popoola Isaiah</h1>
+<p class="hero-typing fade-up delay-2"><span id="typing-text">Full Stack Python Developer</span></p>
+<p class="hero-intro fade-up delay-3">I build scalable web applications and modern digital solutions that help businesses grow.</p>
+<p class="hero-intro fade-up delay-3">From real estate platforms to business management systems, I enjoy turning ideas into production-ready software.</p>
+<div class="hero-actions fade-up delay-4">
+<a href="#portfolio" class="btn btn-primary btn-lg">View My Projects</a>
+<a href="cv.pdf" class="btn hero-btn-secondary btn-lg" target="_blank" rel="noopener">Download CV</a>
 </div>
 </div>
-</div>
-<div class="col-lg-6 text-center">
-<div class="section-card p-4 mx-auto" style="max-width: 520px;">
-<img src="images/myimg.png" class="img-fluid rounded-4 shadow-lg" alt="Popoola Oluwakayode Isaiah">
+<div class="col-lg-6 text-center order-2">
+<div class="hero-visual fade-up delay-4">
+<span class="floating-shape shape-one" aria-hidden="true"></span>
+<span class="floating-shape shape-two" aria-hidden="true"></span>
+<span class="floating-shape shape-three" aria-hidden="true"></span>
+<div class="profile-glow" aria-hidden="true"></div>
+<div class="profile-frame">
+<img src="images/myimg.png" class="img-fluid" alt="Popoola Isaiah">
 </div>
 </div>
 </div>
 </div>
+</div>
+<a href="#about" class="hero-scroll-indicator" aria-label="Scroll to About section">
+<span class="mouse"><span class="wheel"></span></span>
+<span class="scroll-text">Scroll</span>
+</a>
 </section>
 <!-- Hero section ends -->
 
 <!-- About me section Begin -->
-<section id="about" class="py-5">
-<div class="container">
-<div class="row align-items-center gy-4">
-<div class="col-lg-7">
-<h2 class="section-title">About Me</h2>
-<p class="section-subtitle">I am a software developer with a focus on creating intuitive, user-centered websites. I combine strong front-end skills with attention to detail to deliver professional, modern web solutions.</p>
-<p>I am experienced in turning concepts into polished digital products. I prioritize readability, performance, and a seamless experience across devices.</p>
-<p>Currently, I am building my portfolio, sourcing real-world projects, and learning new techniques to level up my design and development workflow.</p>
+<section id="about" class="py-5 about-section">
+<div class="container about-inner">
+<div class="row align-items-center gy-5">
+<div class="col-lg-5 order-1 fade-up">
+<div class="about-media">
+<div class="about-shape" aria-hidden="true"></div>
+<div class="about-image-wrap">
+<img src="images/myimg.png" alt="Popoola Isaiah portrait">
+</div>
+</div>
 </div>
 
-<div class="col-lg-5">
-<div class="section-card p-4 h-100">
-<h5 class="mb-3">What I bring to the table</h5>
-<ul class="list-unstyled mb-0 text-light">
-<li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Clean responsive layouts</li>
-<li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Readable, maintainable code</li>
-<li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Fast loading and accessibility</li>
-<li><i class="fas fa-check-circle text-primary me-2"></i>Friendly collaboration and communication</li>
-</ul>
+<div class="col-lg-7 order-2">
+<p class="about-label fade-up delay-1">ABOUT ME</p>
+<h2 class="about-heading fade-up delay-1">Building Software That Solves Real Problems</h2>
+<p class="about-subtitle fade-up delay-1">Get to know who I am beyond the code.</p>
+<p class="about-copy fade-up delay-2">I'm Popoola Isaiah Oluwakayode, a Full Stack Software Engineer passionate about creating modern, scalable web applications that solve real business challenges. I enjoy turning ideas into intuitive digital experiences with clean architecture and great user experience.</p>
+<p class="about-copy fade-up delay-2">My experience spans real estate platforms, business management systems, automation tools, authentication systems, and responsive websites. I focus on writing maintainable code, building efficient backend systems, and designing interfaces users genuinely enjoy using.</p>
+<p class="about-copy fade-up delay-3">Beyond coding, I continuously learn new technologies, improve my problem-solving skills, and enjoy collaborating on projects that make meaningful impact.</p>
+
+<div class="row g-3 about-stats-grid">
+<div class="col-6 col-md-6 fade-up" style="animation-delay: 0.24s;">
+<article class="about-stat-card">
+<span class="about-stat-icon"><i class="fas fa-briefcase"></i></span>
+<span class="about-stat-title">Experience</span>
+<div class="about-stat-value">1+ Years</div>
+</article>
+</div>
+<div class="col-6 col-md-6 fade-up" style="animation-delay: 0.3s;">
+<article class="about-stat-card">
+<span class="about-stat-icon"><i class="fas fa-code"></i></span>
+<span class="about-stat-title">Projects</span>
+<div class="about-stat-value">15+</div>
+</article>
+</div>
+<div class="col-6 col-md-6 fade-up" style="animation-delay: 0.36s;">
+<article class="about-stat-card">
+<span class="about-stat-icon"><i class="fas fa-location-dot"></i></span>
+<span class="about-stat-title">Location</span>
+<div class="about-stat-value">Nigeria</div>
+</article>
+</div>
+<div class="col-6 col-md-6 fade-up" style="animation-delay: 0.42s;">
+<article class="about-stat-card">
+<span class="about-stat-icon"><i class="fas fa-circle-check"></i></span>
+<span class="about-stat-title">Availability</span>
+<div class="about-stat-value">Open to Work</div>
+</article>
+</div>
+</div>
+
+<a href="cv.pdf" class="btn about-resume-btn fade-up delay-4" target="_blank" rel="noopener">Download Resume</a>
 </div>
 </div>
 </div>
@@ -282,96 +145,261 @@ Mobile-ready design
 <!-- About me section ends -->
 
 <!-- Skills section begin-->
-<section id="skills" class="py-5 bg-dark bg-opacity-50">
-<div class="container">
-<div class="row gy-4 align-items-center">
-<div class="col-lg-5">
-<h2 class="section-title">Skills</h2>
-<p class="section-subtitle">These are the tools and languages I use to build strong front-end experiences and simple, maintainable interfaces.</p>
+<section id="skills" class="py-5 skills-section">
+<div class="container skills-inner">
+<div class="skills-heading fade-up">
+<h2 class="section-title">Skills &amp; Technologies</h2>
+<p class="section-subtitle mx-auto">The technologies I use to build fast, scalable and modern digital solutions.</p>
 </div>
-<div class="col-lg-7">
-<div class="row g-4">
-<div class="col-12">
-<div class="section-card p-4">
-<div class="d-flex align-items-center mb-3">
-<div class="skill-badge"><img src="images/html-5.png" alt="HTML"></div>
-<strong>HTML</strong>
-</div>
-<div class="progress"><div class="progress-bar" style="width: 75%;" role="progressbar"></div></div>
-</div>
-</div>
-<div class="col-12">
-<div class="section-card p-4">
-<div class="d-flex align-items-center mb-3">
-<div class="skill-badge"><img src="images/css-3.png" alt="CSS"></div>
-<strong>CSS</strong>
-</div>
-<div class="progress"><div class="progress-bar" style="width: 65%;" role="progressbar"></div></div>
-</div>
-</div>
-<div class="col-12">
-<div class="section-card p-4">
-<div class="d-flex align-items-center mb-3">
-<div class="skill-badge"><img src="images/boot.png" alt="Bootstrap"></div>
-<strong>Bootstrap</strong>
-</div>
-<div class="progress"><div class="progress-bar" style="width: 60%;" role="progressbar"></div></div>
-</div>
-</div>
-<div class="col-12">
-<div class="section-card p-4">
-<div class="d-flex align-items-center mb-3">
-<div class="skill-badge"><img src="images/java.png" alt="JavaScript"></div>
-<strong>JavaScript</strong>
-</div>
-<div class="progress"><div class="progress-bar" style="width: 25%;" role="progressbar"></div></div>
-</div>
-</div>
-</div>
-</div>
+
+<div class="skills-grid">
+<article class="skill-group-card fade-up" style="animation-delay: 0.08s;">
+<h3 class="skill-group-title">Programming Languages</h3>
+<ul class="skill-tech-list">
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fab fa-python skill-tech-icon"></i><span class="skill-tech-name">Python</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fab fa-js skill-tech-icon"></i><span class="skill-tech-name">JavaScript</span></span>
+<span class="skill-level-badge intermediate">Intermediate</span>
+</li>
+</ul>
+</article>
+
+<article class="skill-group-card fade-up" style="animation-delay: 0.14s;">
+<h3 class="skill-group-title">Frontend</h3>
+<ul class="skill-tech-list">
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fab fa-html5 skill-tech-icon"></i><span class="skill-tech-name">HTML5</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fab fa-css3-alt skill-tech-icon"></i><span class="skill-tech-name">CSS3</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fab fa-bootstrap skill-tech-icon"></i><span class="skill-tech-name">Bootstrap 5</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-file-code skill-tech-icon"></i><span class="skill-tech-name">Jinja2</span></span>
+<span class="skill-level-badge intermediate">Intermediate</span>
+</li>
+</ul>
+</article>
+
+<article class="skill-group-card fade-up" style="animation-delay: 0.2s;">
+<h3 class="skill-group-title">Backend</h3>
+<ul class="skill-tech-list">
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-flask skill-tech-icon"></i><span class="skill-tech-name">Flask</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-layer-group skill-tech-icon"></i><span class="skill-tech-name">SQLAlchemy</span></span>
+<span class="skill-level-badge intermediate">Intermediate</span>
+</li>
+</ul>
+</article>
+
+<article class="skill-group-card fade-up" style="animation-delay: 0.26s;">
+<h3 class="skill-group-title">Databases</h3>
+<ul class="skill-tech-list">
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-database skill-tech-icon"></i><span class="skill-tech-name">MySQL</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+</ul>
+</article>
+
+<article class="skill-group-card fade-up" style="animation-delay: 0.32s;">
+<h3 class="skill-group-title">Tools</h3>
+<ul class="skill-tech-list">
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fab fa-git-alt skill-tech-icon"></i><span class="skill-tech-name">Git</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fab fa-github skill-tech-icon"></i><span class="skill-tech-name">GitHub</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-code skill-tech-icon"></i><span class="skill-tech-name">VS Code</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-paper-plane skill-tech-icon"></i><span class="skill-tech-name">Postman</span></span>
+<span class="skill-level-badge intermediate">Intermediate</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-database skill-tech-icon"></i><span class="skill-tech-name">MySQL Workbench</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-server skill-tech-icon"></i><span class="skill-tech-name">XAMPP</span></span>
+<span class="skill-level-badge advanced">Advanced</span>
+</li>
+</ul>
+</article>
+
+<article class="skill-group-card fade-up" style="animation-delay: 0.38s;">
+<h3 class="skill-group-title">Deployment &amp; Cloud</h3>
+<ul class="skill-tech-list">
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-cloud skill-tech-icon"></i><span class="skill-tech-name">Railway</span></span>
+<span class="skill-level-badge intermediate">Intermediate</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-server skill-tech-icon"></i><span class="skill-tech-name">Render</span></span>
+<span class="skill-level-badge intermediate">Intermediate</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-image skill-tech-icon"></i><span class="skill-tech-name">Cloudinary</span></span>
+<span class="skill-level-badge learning">Learning</span>
+</li>
+<li class="skill-tech-item">
+<span class="skill-tech-info"><i class="fas fa-globe skill-tech-icon"></i><span class="skill-tech-name">InfinityFree</span></span>
+<span class="skill-level-badge learning">Learning</span>
+</li>
+</ul>
+</article>
 </div>
 </div>
 </section>
 <!-- Skills section end -->
 
 <!-- portfolio section begins-->
-<section id="portfolio" class="py-5">
-<div class="container">
+<section id="portfolio" class="py-5 projects-section">
+<div class="container projects-inner">
 <div class="row mb-5">
-<div class="col-lg-8">
-<h2 class="section-title">Portfolio</h2>
-<p class="section-subtitle">A selection of recent projects demonstrating responsive layouts and polished design.</p>
+<div class="col-lg-10">
+<h2 class="section-title">Featured Projects</h2>
+<p class="section-subtitle">Here are some of the software solutions I've designed and built, solving real business problems with modern technologies.</p>
 </div>
 </div>
-<div class="row gx-4 gy-4">
-<div class="col-md-6 col-lg-4 d-flex">
-<div class="card shadow-sm flex-fill">
-<img src="images/1min.png" class="card-img-top" alt="Peptide Website">
-<div class="card-body">
-<h5 class="card-titext text-light">A responsive website built for a peptide company to showcase products and improve buyer access.</p>
-<a href="images/1min.png" class="btn btn-primary" target="_blank">View Sample</a>
+
+<div class="row g-4">
+<div class="col-12 project-reveal" data-delay="0.08">
+<article class="project-card featured-project d-flex flex-column">
+<div class="project-media-wrap">
+<img src="images/2min.png" alt="KayHomes screenshot">
+</div>
+<div class="project-body d-flex flex-column">
+<div class="project-top-meta">
+<span class="project-badge">Featured</span>
+<span class="status-badge">Completed</span>
+</div>
+<h3 class="project-title">KayHomes</h3>
+<p class="project-subtitle">Modern Real Estate Platform</p>
+<p class="project-copy">Designed to simplify property discovery, property listing management, and communication between buyers and property owners.</p>
+
+<span class="project-label">Key Features</span>
+<ul class="feature-list">
+<li><i class="fas fa-check"></i>Property Listings</li>
+<li><i class="fas fa-check"></i>Image Uploads (Cloudinary)</li>
+<li><i class="fas fa-check"></i>Authentication</li>
+<li><i class="fas fa-check"></i>Favorites</li>
+<li><i class="fas fa-check"></i>Search</li>
+<li><i class="fas fa-check"></i>Categories</li>
+<li><i class="fas fa-check"></i>Dashboard</li>
+<li><i class="fas fa-check"></i>Property Details</li>
+<li><i class="fas fa-check"></i>Responsive Design</li>
+</ul>
+
+<span class="project-label">Technologies</span>
+<div class="tech-pill-wrap">
+<span class="tech-pill">Flask</span>
+<span class="tech-pill">Python</span>
+<span class="tech-pill">MySQL</span>
+<span class="tech-pill">Bootstrap</span>
+<span class="tech-pill">SQLAlchemy</span>
+<span class="tech-pill">Cloudinary</span>
+<span class="tech-pill">Railway</span>
+<span class="tech-pill">Jinja2</span>
+</div>
+
+<div class="project-actions">
+<a href="images/2min.png" class="project-btn-primary" target="_blank" rel="noopener">Live Demo</a>
+<a href="#" class="project-btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
 </div>
 </div>
+</article>
 </div>
-<div class="col-md-6 col-lg-4 d-flex">
-<div class="card shadow-sm flex-fill">
-<img src="images/2min.png" class="card-img-top" alt="Matrimony Project">
-<div class="card-body">
-<h5 class="card-title text-light">Matrimony Web App</h5>
-<p class="card-text text-light">A responsive matchmaking app concept built with a focus on clean UI and easy user flow.</p>
-<a href="images/2min.png" class="btn btn-primary" target="_blank">View Sample</a>
+
+<div class="col-md-6 project-reveal" data-delay="0.16">
+<article class="project-card d-flex flex-column">
+<div class="project-media-wrap">
+<img src="images/cv.png" alt="Business Directory screenshot">
+</div>
+<div class="project-body d-flex flex-column">
+<div class="project-top-meta">
+<span class="project-badge">Project</span>
+<span class="status-badge">Completed</span>
+</div>
+<h3 class="project-title">Business Directory</h3>
+<p class="project-copy">Business discovery platform connecting customers with verified businesses.</p>
+
+<span class="project-label">Features</span>
+<ul class="feature-list">
+<li><i class="fas fa-check"></i>Business Listings</li>
+<li><i class="fas fa-check"></i>Search</li>
+<li><i class="fas fa-check"></i>Categories</li>
+<li><i class="fas fa-check"></i>Business Profiles</li>
+</ul>
+
+<span class="project-label">Technologies</span>
+<div class="tech-pill-wrap">
+<span class="tech-pill">Python</span>
+<span class="tech-pill">Flask</span>
+<span class="tech-pill">Bootstrap</span>
+<span class="tech-pill">MySQL</span>
+<span class="tech-pill">GitHub</span>
+</div>
+
+<div class="project-actions">
+<a href="images/cv.png" class="project-btn-primary" target="_blank" rel="noopener">Live Demo</a>
+<a href="#" class="project-btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
 </div>
 </div>
+</article>
 </div>
-<div class="col-md-6 col-lg-4 d-flex">
-<div class="card shadow-sm flex-fill">
-<img src="images/cv.png" class="card-img-top" alt="CV document">
-<div class="card-body">
-<h5 class="card-title text-light">Curriculum Vitae</h5>
-<p class="card-text text-light">Download my CV to see my experience, projects, and technical skills in one polished document.</p>
-<a href="cv.pdf" class="btn btn-primary" target="_blank">Download CV</a>
+
+<div class="col-md-6 project-reveal" data-delay="0.24">
+<article class="project-card d-flex flex-column">
+<div class="project-media-wrap">
+<img src="images/1min.png" alt="Yan Zhen Peptides Website screenshot">
+</div>
+<div class="project-body d-flex flex-column">
+<div class="project-top-meta">
+<span class="project-badge">Project</span>
+<span class="status-badge">Completed</span>
+</div>
+<h3 class="project-title">Yan Zhen Peptides Website</h3>
+<p class="project-copy">A modern business website for a peptide supplier with clean product presentation and responsive UI.</p>
+
+<span class="project-label">Features</span>
+<ul class="feature-list">
+<li><i class="fas fa-check"></i>Responsive Design</li>
+<li><i class="fas fa-check"></i>Product Display</li>
+<li><i class="fas fa-check"></i>Contact Integration</li>
+<li><i class="fas fa-check"></i>Modern UI</li>
+</ul>
+
+<span class="project-label">Technologies</span>
+<div class="tech-pill-wrap">
+<span class="tech-pill">HTML</span>
+<span class="tech-pill">CSS</span>
+<span class="tech-pill">Bootstrap</span>
+<span class="tech-pill">JavaScript</span>
+</div>
+
+<div class="project-actions">
+<a href="images/1min.png" class="project-btn-primary" target="_blank" rel="noopener">Live Demo</a>
+<a href="#" class="project-btn-secondary" target="_blank" rel="noopener">GitHub Repository</a>
 </div>
 </div>
+</article>
 </div>
 </div>
 </div>
@@ -380,105 +408,77 @@ Mobile-ready design
 
 <!-- Contact/inquiry section begin -->
 <section id="contact" class="py-5 bg-dark bg-opacity-50">
-<div class="container">
-<div class="row gy-4 align-items-center">
-<div class="col-lg-5">
-<h2 class="section-title">Let's Build Your Next Project</h2>
-<p class="section-subtitle">Available for freelance and full-time opportunities. Reach out to discuss UI/UX, web apps, or custom websites.</p>
-<div class="mb-4">
-<div class="d-flex align-items-center mb-3">
-<i class="fas fa-laptop-code fa-lg text-primary me-3"></i>
-<span>Web & mobile apps</span>
+
+<div class="container contact-wrap">
+<div class="row gy-4 align-items-start">
+<div class="col-lg-5 col-md-6">
+<h2 class="section-title fade-up">Let's Work Together</h2>
+<p class="section-subtitle fade-up delay-1">Have a project in mind, a role you'd like me to fill, or simply want to connect? I'd love to hear from you.</p>
+<p class="contact-left-copy fade-up delay-1">I'm currently open to freelance projects, full-time opportunities, and meaningful collaborations where thoughtful engineering and clean user experience matter.</p>
+
+<div class="contact-grid">
+<article class="contact-info-card fade-up" style="animation-delay: 0.2s;">
+<span class="contact-icon"><i class="fas fa-envelope"></i></span>
+<div>
+<div class="contact-info-label">Email</div>
+<div class="contact-info-value">popoolaisaiah07@gmail.com</div>
 </div>
-<div class="d-flex align-items-center mb-3">
-<i class="fas fa-paint-brush fa-lg text-primary me-3"></i>
-<span>UI/UX design</span>
+</article>
+
+<article class="contact-info-card fade-up" style="animation-delay: 0.26s;">
+<span class="contact-icon"><i class="fas fa-phone"></i></span>
+<div>
+<div class="contact-info-label">Phone</div>
+<div class="contact-info-value">+234 XXX XXX XXXX</div>
 </div>
-<div class="d-flex align-items-center">
-<i class="fas fa-server fa-lg text-primary me-3"></i>
-<span>APIs & backend</span>
+</article>
+
+<article class="contact-info-card fade-up" style="animation-delay: 0.32s;">
+<span class="contact-icon"><i class="fas fa-location-dot"></i></span>
+<div>
+<div class="contact-info-label">Location</div>
+<div class="contact-info-value">Nigeria</div>
+</div>
+</article>
+
+<article class="contact-info-card fade-up" style="animation-delay: 0.38s;">
+<span class="contact-icon"><i class="fas fa-circle-check"></i></span>
+<div>
+<div class="contact-info-label">Availability</div>
+<div class="contact-info-value">Open to Work</div>
+</div>
+</article>
+</div>
+
+<div class="social-links fade-up delay-4">
+<a href="#" class="social-link-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+<a href="#" class="social-link-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" class="social-link-btn" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+<a href="#" class="social-link-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
 </div>
 </div>
-<div class="text-muted text-light">
-<p class="mb-2 text-light"><i class="fas fa-phone-alt me-2"></i>+234 800 055 9966</p>
-<p class="mb-2 text-light"><i class="fas fa-envelope me-2"></i>youremail@example.com</p>
-<p class="mb-0 text-light"><i class="fas fa-map-marker-alt me-2"></i>Block 7, New City Estate, Lagos</p>
-</div>
-</div>
-<div class="col-lg-7">
-<div class="contact-card p-4 shadow-sm">
+
+<div class="col-lg-7 col-md-6">
+<div class="contact-form-shell fade-up" style="animation-delay: 0.2s;">
 <form class="row g-3" novalidate>
-<div class="col-md-6">
-<label for="inputName" class="form-label">Name</label>
-<input type="text" class="form-control" id="inputName" placeholder="Your name">
-</div>
-<div class="col-md-6">
-<label for="inputEmail4" class="form-label">Email</label>
-<input type="email" class="form-control" id="inputEmail4" placeholder="name@example.com">
+<div class="col-12">
+<label for="contactFullName" class="form-label">Full Name</label>
+<input type="text" class="form-control" id="contactFullName" placeholder="Your full name">
 </div>
 <div class="col-12">
-<label for="inputAddress" class="form-label">Address</label>
-<input type="text" class="form-control" id="inputAddress" placeholder="Your address">
-</div>
-<div class="col-md-6">
-<label for="phoneNumber" class="form-label">Phone Number</label>
-<input type="tel" class="form-control" id="phoneNumber" placeholder="+234">
-</div>
-<div class="col-md-6">
-<label for="inputCity" class="form-label">City</label>
-<input type="text" class="form-control" id="inputCity" placeholder="Lagos">
-</div>
-<div class="col-md-6">
-<label for="inputState" class="form-label">State</label>
-<select id="inputState" class="form-select">
-<option value="">Select a state</option>
-<option>Abuja</option>
-<option>Abia</option>
-<option>Adamawa</option>
-<option>Akwa Ibom</option>
-<option>Anambra</option>
-<option>Bauchi</option>
-<option>Bayelsa</option>
-<option>Benue</option>
-<option>Cross River</option>
-<option>Delta</option>
-<option>Ebonyi</option>
-<option>Edo</option>
-<option>Enugu</option>
-<option>Gombe</option>
-<option>Imo</option>
-<option>Jigawa</option>
-<option>Kaduna</option>
-<option>Kano</option>
-<option>Katsina</option>
-<option>Kogi</option>
-<option>Kwara</option>
-<option>Lagos</option>
-<option>Nassarawa</option>
-<option>Niger</option>
-<option>Ondo</option>
-<option>Osun</option>
-<option>Oyo</option>
-<option>Plateau</option>
-<option>Rivers</option>
-<option>Sokoto</option>
-<option>Taraba</option>
-<option>Yobe</option>
-<option>Zamfara</option>
-</select>
+<label for="contactEmail" class="form-label">Email Address</label>
+<input type="email" class="form-control" id="contactEmail" placeholder="name@example.com">
 </div>
 <div class="col-12">
-<label for="floatingTextarea" class="form-label">Message</label>
-<textarea class="form-control" id="floatingTextarea" rows="4" placeholder="Tell me about your project"></textarea>
+<label for="contactSubject" class="form-label">Subject</label>
+<input type="text" class="form-control" id="contactSubject" placeholder="What can I help you with?">
 </div>
 <div class="col-12">
-<div class="form-check">
-<input class="form-check-input" type="checkbox" id="gridCheck">
-<label class="form-check-label" for="gridCheck">Remember me</label>
-</div>
+<label for="contactMessage" class="form-label">Message</label>
+<textarea class="form-control" id="contactMessage" rows="5" placeholder="Tell me about your project, role, or idea"></textarea>
 </div>
 <div class="col-12">
-<button type="submit" class="btn btn-primary w-100">Submit</button>
+<button type="submit" class="btn contact-send-btn w-100 fade-up delay-4">Send Message</button>
 </div>
 </form>
 </div>
@@ -489,14 +489,54 @@ Mobile-ready design
 <!-- Contact/inquiry section ends -->
 
 <!-- Footer section Begin -->
-<footer class="footer-bar text-center">
+<footer class="footer-bar">
+
 <div class="container">
-<div class="d-flex justify-content-center align-items-center gap-3 mb-3">
-<a href="#" class="text-white fs-5"><i class="fab fa-linkedin"></i></a>
-<a href="#" class="text-white fs-5"><i class="fab fa-github"></i></a>
-<a href="#" class="text-white fs-5"><i class="fab fa-whatsapp"></i></a>
+<div class="footer-shell">
+<div class="row gy-4">
+<div class="col-lg-3 col-md-6 text-md-start fade-up">
+<a href="#top" class="footer-brand">KayDev</a>
+<p class="footer-copy mb-0">Building modern, scalable, and user-focused software solutions with clean code and thoughtful design.</p>
 </div>
-<p class="mb-0">Developed by KayDevs.Ent &copy; 2026</p>
+
+<div class="col-lg-3 col-md-6 text-md-start fade-up" style="animation-delay: 0.1s;">
+<h6 class="footer-title">Quick Links</h6>
+<ul class="footer-list">
+<li><a class="footer-link" href="#top">Home</a></li>
+<li><a class="footer-link" href="#about">About</a></li>
+<li><a class="footer-link" href="#skills">Skills</a></li>
+<li><a class="footer-link" href="#portfolio">Projects</a></li>
+<li><a class="footer-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6 text-md-start fade-up" style="animation-delay: 0.18s;">
+<h6 class="footer-title">Services</h6>
+<ul class="footer-list">
+<li><span class="footer-copy">Web Development</span></li>
+<li><span class="footer-copy">Backend Development</span></li>
+<li><span class="footer-copy">Database Design</span></li>
+<li><span class="footer-copy">REST API Development</span></li>
+<li><span class="footer-copy">Responsive UI</span></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6 text-md-start fade-up" style="animation-delay: 0.26s;">
+<h6 class="footer-title">Social Links</h6>
+<div class="footer-social-row">
+<a href="#" class="footer-social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+<a href="#" class="footer-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" class="footer-social-btn" aria-label="Twitter X"><i class="fab fa-x-twitter"></i></a>
+<a href="#" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+
+<div class="footer-bottom fade-up" style="animation-delay: 0.34s;">
+<span>&copy; 2026 KayDev. All Rights Reserved.</span>
+<span>Designed &amp; Developed by Popoola Isaiah</span>
+</div>
+</div>
 </div>
 </footer>
 <!-- Footer section Ends -->
@@ -506,5 +546,7 @@ Mobile-ready design
 </a>
 
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>
