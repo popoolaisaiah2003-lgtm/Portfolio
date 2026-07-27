@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}KayDev | Web Developer Portfolio{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Popoola Isaiah's portfolio of scalable Flask applications and modern digital products.{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ self.title()|striptags }}">
+    <meta property="og:description" content="{{ self.meta_description()|striptags }}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/myimg.png', _external=True) }}">
+    <meta property="og:url" content="{{ request.url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..800&family=Playfair+Display:wght@400..900&family=Roboto:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='icons/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='icons/apple-touch-icon.png') }}">
+    {% block head %}{% endblock %}
+</head>
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include 'partials/navbar.html' %}
+    <main id="main-content">{% block content %}{% endblock %}</main>
+    {% include 'partials/footer.html' %}
+    <a href="#top" class="scroll-top" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</body>
+</html>

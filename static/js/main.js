@@ -59,7 +59,7 @@ setTimeout(typeLoop, 45);
 typeLoop();
 }
 
-var projectItems = document.querySelectorAll('#portfolio .project-reveal');
+var projectItems = document.querySelectorAll('.project-reveal');
 
 if (projectItems.length > 0 && 'IntersectionObserver' in window) {
 var revealObserver = new IntersectionObserver(function (entries, observer) {
@@ -76,6 +76,22 @@ observer.unobserve(entry.target);
 
 projectItems.forEach(function (item) {
 revealObserver.observe(item);
+});
+} else {
+projectItems.forEach(function (item) {
+item.classList.add('is-visible');
+});
+}
+
+var navigation = document.getElementById('mainNav');
+
+if (navigation && window.bootstrap) {
+navigation.querySelectorAll('.nav-link').forEach(function (link) {
+link.addEventListener('click', function () {
+if (window.innerWidth < 992 && navigation.classList.contains('show')) {
+window.bootstrap.Collapse.getOrCreateInstance(navigation).hide();
+}
+});
 });
 }
 })();

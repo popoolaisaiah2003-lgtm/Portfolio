@@ -1,0 +1,16 @@
+<article class="project-card d-flex flex-column project-reveal">
+    <a class="project-media-wrap" href="{{ url_for('projects.detail', slug=slug) }}" aria-label="View {{ project.title }} case study">
+        <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }} project screenshot" width="1200" height="675" loading="lazy">
+    </a>
+    <div class="project-body d-flex flex-column">
+        <div class="project-top-meta"><span class="project-badge">{{ project.category }}</span><span class="status-badge">{{ project.status }}</span></div>
+        <h2 class="project-title"><a href="{{ url_for('projects.detail', slug=slug) }}">{{ project.title }}</a></h2>
+        <p class="project-copy">{{ project.description }}</p>
+        <span class="project-label">Technologies</span>
+        <div class="tech-pill-wrap">{% for technology in project.technologies %}<span class="tech-pill">{{ technology }}</span>{% endfor %}</div>
+        <div class="project-actions">
+            <a href="{{ url_for('projects.detail', slug=slug) }}" class="project-btn-primary">View Case Study</a>
+            {% if project.github_url %}<a href="{{ project.github_url }}" class="project-btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>{% endif %}
+        </div>
+    </div>
+</article>

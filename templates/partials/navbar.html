@@ -1,0 +1,16 @@
+<header class="navbar navbar-expand-lg navbar-dark sticky-top site-navbar" id="mainHeader">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url_for('main.home') }}">KayDev</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse" id="mainNav" aria-label="Primary navigation">
+            <ul class="navbar-nav ms-auto gap-lg-2">
+                <li class="nav-item"><a class="nav-link {{ 'active' if request.endpoint == 'main.home' }}" href="{{ url_for('main.home') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link {{ 'active' if request.endpoint == 'main.about' }}" href="{{ url_for('main.about') }}">About</a></li>
+                <li class="nav-item"><a class="nav-link {{ 'active' if request.blueprint == 'projects' }}" href="{{ url_for('projects.index') }}">Projects</a></li>
+                <li class="nav-item"><a class="nav-link {{ 'active' if request.endpoint == 'main.contact' }}" href="{{ url_for('main.contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
