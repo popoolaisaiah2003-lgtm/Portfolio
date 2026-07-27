@@ -25,7 +25,7 @@ PROJECTS = {
         "solution": "A focused catalogue hierarchy, reusable Flask templates, and mobile-first product layouts keep the experience polished and easy to navigate.",
         "live_url": None,
         "github_url": "https://github.com/popoolaisaiah2003-lgtm/-KnotiQue.git",
-        "status": "Completed",
+        "status": "Almost completed",
     },
     "yan-zhen-peptides": {
         "title": "Yan Zhen Peptides Website",
