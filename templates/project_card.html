@@ -1,0 +1,18 @@
+<article class="project-card d-flex flex-column project-reveal">
+    <a class="project-media-wrap" href="{{ url_for('projects.detail', slug=slug) }}" aria-label="View {{ project.title }} case study">
+        <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }} project screenshot" width="1200" height="675" loading="lazy">
+    </a>
+    <div class="project-body d-flex flex-column">
+        <div class="project-top-meta"><span class="project-badge">{{ project.category }}</span><span class="status-badge">{{ project.status }}</span></div>
+        <h2 class="project-title"><a href="{{ url_for('projects.detail', slug=slug) }}">{{ project.title }}</a></h2>
+        {% if project.subtitle %}<p class="project-subtitle">{{ project.subtitle }}</p>{% endif %}
+        <p class="project-copy">{{ project.description }}</p>
+        <span class="project-label">Technologies</span>
+        <div class="tech-pill-wrap">{% for technology in project.technologies %}<span class="tech-pill">{{ technology }}</span>{% endfor %}</div>
+        <div class="project-actions">
+            <a href="{{ project.live_url or url_for('projects.detail', slug=slug) }}" class="project-action-card project-action-card-primary" {% if project.live_url %}target="_blank" rel="noopener noreferrer"{% endif %}><span class="project-action-icon" aria-hidden="true"><i class="fas fa-rocket"></i></span><span class="project-action-copy"><span class="project-action-title">Live Demo</span><span class="project-action-subtitle">Open the live build</span></span><span class="project-action-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span></a>
+            {% if project.github_url %}<a href="{{ project.github_url }}" class="project-action-card project-action-card-secondary" target="_blank" rel="noopener noreferrer"><span class="project-action-icon" aria-hidden="true"><i class="fab fa-github"></i></span><span class="project-action-copy"><span class="project-action-title">GitHub</span><span class="project-action-subtitle">View source code</span></span><span class="project-action-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span></a>{% endif %}
+            <a href="{{ url_for('projects.detail', slug=slug) }}" class="project-action-card project-action-card-secondary"><span class="project-action-icon" aria-hidden="true"><i class="fas fa-info-circle"></i></span><span class="project-action-copy"><span class="project-action-title">Details</span><span class="project-action-subtitle">See the project story</span></span><span class="project-action-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span></a>
+        </div>
+    </div>
+</article>
