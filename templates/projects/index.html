@@ -1,4 +1,0 @@
-{% extends 'layouts/base.html' %}
-{% block title %}Projects | KayDev{% endblock %}
-{% block meta_description %}Explore web applications and software projects built by Popoola Isaiah with Flask, Python, MySQL, Bootstrap, and JavaScript.{% endblock %}
-{% block content %}<section class="page-hero"><div class="container"><p class="about-label">Selected Work</p><h1>Projects</h1><p>Production-minded software solving real business problems.</p></div></section><section class="py-5 projects-section"><div class="container projects-inner"><div class="project-grid">{% for slug, project in projects.items() %}{% include 'partials/project_card.html' %}{% endfor %}</div></div></section>{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}KayDev | Popoola Isaiah, Full Stack Python Developer{% endblock %}
+{% block meta_description %}Portfolio of Popoola Isaiah, a Full Stack Python Developer building scalable web applications and modern digital solutions.{% endblock %}
+{% block content %}
+<section class="hero" id="home">
+    <div class="container hero-content"><div class="row align-items-center gy-5"><div class="col-lg-6">
+        <p class="hero-kicker fade-up">Hello, I'm</p><h1 class="hero-name fw-bold fade-up delay-1">Popoola Isaiah</h1>
+        <p class="hero-typing fade-up delay-2"><span id="typing-text">Full Stack Python Developer</span></p>
+        <p class="hero-intro fade-up delay-3">I build scalable web applications and modern digital solutions that help businesses grow. From real estate platforms to business management systems, I enjoy turning ideas into production-ready software.</p>
+        <div class="hero-actions fade-up delay-4"><a href="{{ url_for('projects.index') }}" class="btn btn-primary btn-lg">View My Projects</a><a href="{{ url_for('static', filename='files/cv.pdf') }}" class="btn hero-btn-secondary btn-lg" download>Download CV</a></div>
+    </div><div class="col-lg-6 text-center"><div class="hero-visual fade-up delay-4"><span class="floating-shape shape-one" aria-hidden="true"></span><span class="floating-shape shape-two" aria-hidden="true"></span><span class="floating-shape shape-three" aria-hidden="true"></span><div class="profile-glow" aria-hidden="true"></div><div class="profile-frame"><img src="{{ url_for('static', filename='images/main.jpeg') }}" class="img-fluid" alt="Popoola Isaiah" width="600" height="600"></div></div></div></div></div>
+</section>
+<section class="py-5 about-section"><div class="container"><div class="row align-items-center gy-4"><div class="col-lg-5"><div class="about-image-wrap"><img src="{{ url_for('static', filename='images/main2.jpeg') }}" alt="Popoola Isaiah portrait" width="600" height="750" loading="lazy"></div></div><div class="col-lg-7"><p class="about-label">About Me</p><h2 class="about-heading">Building Software That Solves Real Problems</h2><p class="about-copy">I'm Popoola Isaiah Oluwakayode, a Full Stack Software Engineer passionate about creating modern, scalable web applications that solve real business challenges.</p><a href="{{ url_for('main.about') }}" class="btn about-resume-btn">More About Me</a></div></div></div></section>
+<section class="py-5 projects-section"><div class="container projects-inner"><h2 class="section-title">Featured Projects</h2><p class="section-subtitle mb-4">Software solutions I've designed and built with modern technologies.</p><div class="project-grid">{% for slug, project in projects.items() %}{% include 'project_card.html' %}{% endfor %}</div><div class="text-center mt-4"><a class="btn about-resume-btn" href="{{ url_for('projects.index') }}">Explore All Projects</a></div></div></section>
+{% endblock %}

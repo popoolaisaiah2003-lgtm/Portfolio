@@ -833,11 +833,12 @@ border-radius: 999px;
 display: flex;
 gap: 0.7rem;
 margin-top: auto;
+flex-wrap: wrap;
 }
 
 .project-btn-primary,
 .project-btn-secondary {
-flex: 1;
+flex: 1 1 140px;
 padding: 0.7rem 0.95rem;
 border-radius: 0.82rem;
 font-weight: 600;

@@ -8,7 +8,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ self.title()|striptags }}">
     <meta property="og:description" content="{{ self.meta_description()|striptags }}">
-    <meta property="og:image" content="{{ url_for('static', filename='images/myimg.png', _external=True) }}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/main.jpeg', _external=True) }}">
     <meta property="og:url" content="{{ request.url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +22,9 @@
 </head>
 <body id="top">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    {% include 'partials/navbar.html' %}
+    {% include 'navbar.html' %}
     <main id="main-content">{% block content %}{% endblock %}</main>
-    {% include 'partials/footer.html' %}
+    {% include 'footer.html' %}
     <a href="#top" class="scroll-top" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>

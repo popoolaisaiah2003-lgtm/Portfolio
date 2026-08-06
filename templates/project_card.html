@@ -5,12 +5,14 @@
     <div class="project-body d-flex flex-column">
         <div class="project-top-meta"><span class="project-badge">{{ project.category }}</span><span class="status-badge">{{ project.status }}</span></div>
         <h2 class="project-title"><a href="{{ url_for('projects.detail', slug=slug) }}">{{ project.title }}</a></h2>
+        {% if project.subtitle %}<p class="project-subtitle">{{ project.subtitle }}</p>{% endif %}
         <p class="project-copy">{{ project.description }}</p>
         <span class="project-label">Technologies</span>
         <div class="tech-pill-wrap">{% for technology in project.technologies %}<span class="tech-pill">{{ technology }}</span>{% endfor %}</div>
         <div class="project-actions">
-            <a href="{{ url_for('projects.detail', slug=slug) }}" class="project-btn-primary">View Case Study</a>
+            {% if project.live_url %}<a href="{{ project.live_url }}" class="project-btn-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>{% else %}<a href="{{ url_for('projects.detail', slug=slug) }}" class="project-btn-primary">Details</a>{% endif %}
             {% if project.github_url %}<a href="{{ project.github_url }}" class="project-btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>{% endif %}
+            {% if project.live_url %}<a href="{{ url_for('projects.detail', slug=slug) }}" class="project-btn-secondary">Details</a>{% endif %}
         </div>
     </div>
 </article>
