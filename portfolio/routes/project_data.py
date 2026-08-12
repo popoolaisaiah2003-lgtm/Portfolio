@@ -10,7 +10,7 @@ PROJECTS = {
         "technologies": ["Flask", "Python", "MySQL", "Bootstrap", "SQLAlchemy", "Cloudinary", "Railway", "Jinja2"],
         "challenge": "Property media, discovery filters, and owner workflows needed to remain fast and understandable on both phones and desktops.",
         "solution": "The application uses structured listing data, cloud-hosted media, focused search controls, and role-aware dashboard flows in a responsive Bootstrap interface.",
-        "live_url": "https://peptide-production-21ed.up.railway.app/",
+        "live_url": "https://kayhomes.kaydevs.com/",
         "github_url": "https://github.com/popoolaisaiah2003-lgtm/peptide.git",
         "status": "Completed",
     },
